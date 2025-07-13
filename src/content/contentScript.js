@@ -52,18 +52,6 @@ function runIndependentTasks(tasks) {
 }
 
 /**
- * CSS 선택자를 이용해 페이지에서 DOM 요소를 찾습니다.
- * @param {string} selector - 찾을 요소의 CSS 선택자
- * @returns {Result<HTMLElement>} 성공 시 DOM 요소를, 실패 시 에러를 담은 Result
- */
-function findElement(selector) {
-  const element = document.querySelector(selector);
-  return element
-    ? Ok(element)
-    : Err(new Error(`'${selector}' 요소를 찾을 수 없습니다.`));
-}
-
-/**
  * 숫자 입력(input[type=number]) 또는 레인지 슬라이더(input[type=range])의 값을 설정합니다.
  * @param {HTMLElement} element - 값을 설정할 input 요소
  * @param {number} value - 설정할 숫자 값
