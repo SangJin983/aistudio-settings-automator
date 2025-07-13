@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Studio 설정</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        width: 280px;
+        padding: 10px;
+      }
+      .setting-group {
+        margin-bottom: 16px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      input[type="number"] {
+        width: 60px;
+      }
+      .toggle-label {
+        cursor: pointer;
+      }
+      button {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      #status {
+        text-align: center;
+        height: 16px;
+        font-size: 12px;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Run Settings 자동 설정</h3>
+
+    <div class="setting-group">
+      <label for="temperature">
+        <span>Temperature</span>
+        <input type="number" id="temperature" min="0" max="2" step="0.1" />
+      </label>
+    </div>
+
+    <div class="setting-group">
+      <label class="toggle-label" for="enableGoogleSearch">
+        <span>Grounding with Google Search</span>
+        <input type="checkbox" id="enableGoogleSearch" />
+      </label>
+    </div>
+
+    <div class="setting-group">
+      <label class="toggle-label" for="enableUrlContext">
+        <span>URL context</span>
+        <input type="checkbox" id="enableUrlContext" />
+      </label>
+    </div>
+
+    <button id="saveButton">저장</button>
+    <p id="status"></p>
+
+    <script type="module" src="popupScript.js"></script>
+  </body>
+</html>

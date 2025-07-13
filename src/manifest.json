@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI Studio 자동 설정",
+  "version": "1.0.0",
+  "description": "aistudio.google.com의 Run settings를 자동으로 설정합니다.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://aistudio.google.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://aistudio.google.com/*"],
+      "js": ["content/contentScript.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}
